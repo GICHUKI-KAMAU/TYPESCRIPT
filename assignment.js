@@ -154,3 +154,20 @@ function parseURL(url) {
 let url = "https://www.example.com:8080/path/page?name=JohnDoe&id=123#section";
 console.log(parseURL(url));
 
+//Q13 A JavaScript function to retrieve all the names of an object's own and inherited properties.
+function getAllPropertyNames(obj) {
+  let properties = new Set();
+
+  do {
+     Object.getOwnPropertyNames(obj).forEach(prop => properties.add(prop));
+  
+  } while (obj = Object.getPrototypeOf(obj));
+
+  return [...properties];
+}
+const obj = { name: "John", age: 30 };  
+Object.prototype.gender = "Male";       
+
+console.log(getAllPropertyNames(obj));
+
+
