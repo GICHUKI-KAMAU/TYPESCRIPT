@@ -84,3 +84,4 @@ const usersAverageLikes = users.map(user => {
 // Log each user's average likes
 usersAverageLikes.forEach(user => 
     console.log(`${user.name} has an average of ${user.averageLikes.toFixed(2)} likes per post`) );
+//end of code
